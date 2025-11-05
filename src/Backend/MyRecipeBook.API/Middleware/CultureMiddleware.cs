@@ -3,7 +3,7 @@
 namespace MyRecipeBook.API.Middleware;
 /*
 *   Middleware criado no curso, porém o ASP.NET Core já possui uma solução nativa -> Request Localization Middleware
-*   Pra continuar esse middleware criada basta adicionar na classe Program -> app.UseMiddleware<CultureMiddleware>();
+*   Pra utilizar esse middleware criado basta adicionar na classe Program -> app.UseMiddleware<CultureMiddleware>();
 */
 public class CultureMiddleware
 {

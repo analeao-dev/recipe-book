@@ -27,9 +27,10 @@ public class RegisterUserUseCase
         var user = autoMapper.Map<Domain.Entities.User>(request);
         user.Password = cryptographyPassword.Encrypt(request.Password);
 
+        // Salvar entidade no banco de dados
         await _writeOnlyRepository.Add(user);
 
-        // Salvar entidade no banco de dados
+        
         return new ResponseRegisterUserJson
         {
             Name = request.Name
