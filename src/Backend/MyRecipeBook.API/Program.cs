@@ -11,8 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
-builder.Services.AddAplication();
-builder.Services.AddInfrastructure();
+builder.Services.AddAplication(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var supportedCultures = new[] { "en", "pt-BR", "pt-PT", "fr" };
 builder.Services.AddLocalization();

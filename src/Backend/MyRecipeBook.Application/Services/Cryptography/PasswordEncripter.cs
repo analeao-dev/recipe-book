@@ -4,6 +4,8 @@ using System.Text;
 namespace MyRecipeBook.Application.Services.Cryptography;
 public class PasswordEncripter
 {
+    private readonly string _addtionalKey;
+    public PasswordEncripter(string addtionalKey) => _addtionalKey = addtionalKey;
     public string Encrypt(string password)
     {
         var key = "ABC";
