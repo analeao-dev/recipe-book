@@ -16,10 +16,10 @@ public static class DependencyInjectionExtension
 
     private static void AddAutoMapper(IServiceCollection services)
     {
-        services.AddScoped(option => new AutoMapper.MapperConfiguration(options =>
+        services.AddAutoMapper(options =>
         {
             options.AddProfile(new AutoMapping());
-        }).CreateMapper());
+        }, typeof(AutoMapping));
     }
 
     private static void AddUseCases(IServiceCollection services)
